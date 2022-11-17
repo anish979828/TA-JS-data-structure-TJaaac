@@ -193,13 +193,14 @@ let person = [
 ];
 
 // Your code goes here
-let clonedPerson = [{ input: {...person[0].input}}, { output: {...person[0].output}},{ input: {...person[1].input}}, { output: {...person[1].output}}]
+let clonedPerson = JSON.parse(JSON.stringify(person))
 ```
 
 <!-- 8. Write a function named `cloneObject` that accepts an object and returns the clone of the object -->
 
 ```js
-function cloneObject() {
+function cloneObject(obj) {
+  return JSON.parse(JSON.stringify(obj));
  
 }
 
